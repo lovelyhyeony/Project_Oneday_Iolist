@@ -1,0 +1,54 @@
+@charset "UTF-8";
+table#iolist-list {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 90%;
+  border: 1px solid #aaa;
+  margin: 30px auto;
+}
+
+table#iolist-list th,
+table#iolist-list td {
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+table#iolist-list td {
+  cursor: pointer;
+}
+
+table#iolist-list tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+table#iolist-list tr:nth-child(odd) {
+  background-color: white;
+}
+
+table#iolist-list tr:nth-child(n + 2):hover {
+  background-color: white;
+}
+
+div#iolist-link-box {
+  width: 90%;
+  margin: 10px auto;
+  text-align: right;
+}
+
+div#iolist-link-box a {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #795548;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 2px solid transparent;
+}
+
+div#iolist-link-box a:hover {
+  background-color: white;
+  color: #795548;
+  border: 2px solid #795548;
+}

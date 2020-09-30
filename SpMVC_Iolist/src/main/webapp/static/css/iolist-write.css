@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+form#iolist {
+  width: 60%;
+  margin: 10px auto;
+}
+
+form#iolist div {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+}
+
+form#iolist label {
+  flex: 1;
+  width: 30%;
+  text-align: right;
+  padding: 8px;
+  margin: 5px;
+}
+
+form#iolist input {
+  flex: 5; /*diplay를 블록으로 만들어주면 한줄에 하나가 차지를 하기 때문에 아래로 흐름*/
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 8px;
+  outline: none;
+}
+
+form#iolist fieldset {
+  border: 2px solid #bcaaa4;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+form#iolist fieldset legend {
+  font-weight: bold;
+  color: #bcaaa4;
+  text-align: center;
+}
+
+form#iolist div.button-box {
+  justify-content: flex-end;
+}
+
+form#iolist button#btn-save {
+  background-color: #795548;
+  color: white;
+  padding: 0.5rem 25px;
+  border: none;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+form#iolist button#btn-save:hover {
+  background-color: white;
+  color: #795548;
+  border: 2px solid #795548;
+}
