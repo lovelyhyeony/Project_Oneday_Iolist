@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>IOLIST</title>
 <link rel="stylesheet"
-	href="${rootPath}/static/css/index.css?ver=2020-09-30-001" />
+	href="${rootPath}/static/css/index.css?ver=2020-10-01" />
 <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script>
 	$(function() {
@@ -33,13 +33,7 @@
 	<header></header>
 	<nav id="main-nav">
 		<ul>
-			<li>IOLIST</li>
-			<li>상품 입력</li>
 			<li>상품 검색</li>
-			<li>회원가입</li>
-			<li>로그인</li>
-			<li>마이페이지</li>
-			<li>로그아웃</li>
 		</ul>
 	</nav>
 	<section id="main-section">
@@ -47,7 +41,10 @@
 			<c:when test="${BODY == 'IOLIST-WRITE'}">
 				<%@ include file="/WEB-INF/views/iolist/iolist-write.jsp" %>
 			</c:when>
-			<c:otherwise>
+			<c:when test="${BODY == 'IOLIST-DETAIL'}">
+				<%@ include file="/WEB-INF/views/iolist/iolist-detail.jsp" %>
+			</c:when>
+			<c:otherwise> 
 				<%@ include file="/WEB-INF/views/iolist/iolist-list.jsp" %>
 			</c:otherwise>
 		</c:choose>

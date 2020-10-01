@@ -50,16 +50,6 @@ nav#main-nav {
   border-bottom: 2px solid transparent;
 }
 
-#main-nav ul li:first-child {
-  font-size: 16px;
-  font-weight: 900;
-}
-
-#main-nav ul li:nth-child(3),
-#main-nav ul li:nth-child(4) {
-  margin-left: auto;
-}
-
 #main-nav ul li:hover {
   background-color: ghostwhite;
   color: #795548;

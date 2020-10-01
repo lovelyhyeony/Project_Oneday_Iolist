@@ -1,6 +1,6 @@
 package com.biz.iolist.controller;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
@@ -10,7 +10,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.biz.iolist.mapper.IolistDao;
 import com.biz.iolist.model.IolistVO;
 import com.biz.iolist.service.IolistService;
 
@@ -21,41 +23,74 @@ import lombok.extern.slf4j.Slf4j;
 @RequiredArgsConstructor
 @Controller
 public class IolistController {
-	
+
 	@Qualifier("iolistServiceV1")
 	private final IolistService iolistService;
-	
-	@RequestMapping(value = "/iolist", method=RequestMethod.GET)
+
+	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String list(Model model) {
 		List<IolistVO> iolist = iolistService.selectAll();
 		model.addAttribute("IOLIST", iolist);
 		return "home";
 	}
-	
-	@RequestMapping(value = "/write", method=RequestMethod.GET)
-	public String write(@ModelAttribute IolistVO iolistVO ,Model model) {
-		
+
+	@RequestMapping(value = "/write", method = RequestMethod.GET)
+	public String write(@ModelAttribute IolistVO iolistVO, Model model) {
+
+		model.addAttribute("LOCATION","INSERT");
 		model.addAttribute("BODY", "IOLIST-WRITE");
+		
+		return "home";
+	}
+
+	@RequestMapping(value = "/write", method = RequestMethod.POST)
+	public String write(@ModelAttribute IolistVO iolistVO, Model model, String s) {
+		LocalDateTime localDate = LocalDateTime.now();
+		String date = DateTimeFormatter.ofPattern("yyyy-MM-dd").format(localDate);
+		String time = DateTimeFormatter.ofPattern("HH:mm:ss").format(localDate);
+
+		iolistVO.setIo_date(date);
+		iolistVO.setIo_time(time);
+
+		model.addAttribute("iolistVO", iolistVO);
+
+		log.debug("정보 입력 : {}", iolistVO.toString());
+		int ret = iolistService.insert(iolistVO);
+		return "redirect:/";
+	}
+
+	@RequestMapping(value = "/detail", method = RequestMethod.GET)
+	public String detail(@RequestParam("seq") String seq, Model model) {
+		IolistVO iolistVO = iolistService.findBySeq(Long.valueOf(seq));
+
+		model.addAttribute("ioVO", iolistVO);
+		model.addAttribute("BODY", "IOLIST-DETAIL");
 		return "home";
 	}
 	
-	@RequestMapping(value = "/write", method=RequestMethod.POST)
-	public String write(@ModelAttribute IolistVO iolistVO, Model model, String s) {
-		LocalDate localDate = LocalDate.now();
-		String date = DateTimeFormatter
-				.ofPattern("yyyy-MM-dd").format(localDate);
-		String time = DateTimeFormatter
-				.ofPattern("hh:mm:ss").format(localDate);
+	@RequestMapping(value = "/delete", method=RequestMethod.GET)
+	public String delete(@RequestParam("seq") String seq) {
 		
-		iolistVO = IolistVO.builder()
-				.io_date(date)
-				.io_time(time)
-				.build();
+		iolistService.delete(Long.valueOf(seq));
+		return "redirect:/";
+	}
+	
+	@RequestMapping(value = "/update", method=RequestMethod.GET)
+	public String update(@RequestParam("seq") String seq, Model model) {
 		
+		IolistVO iolistVO = iolistService.findBySeq(Long.valueOf(seq));
+		model.addAttribute("iolistVO", iolistVO);
+		model.addAttribute("LOCATION","UPDATE");
 		model.addAttribute("BODY", "IOLIST-WRITE");
-		model.addAttribute("iolistVO",iolistVO);
-		log.debug("정보 입력 : {}", iolistVO.toString());
-		int ret = iolistService.insert(iolistVO);
+		
 		return "home";
+	}
+	
+	@RequestMapping(value = "/update", method=RequestMethod.POST)
+	public String update(@ModelAttribute IolistVO iolistVO, Model model) {
+		int ret = iolistService.update(iolistVO);
+		
+		model.addAttribute("seq", iolistVO.getSeq());
+		return "redirect:/";
 	}
 }

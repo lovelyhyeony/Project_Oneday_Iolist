@@ -21,8 +21,7 @@
  			io_input,
  			io_pname,
  			io_price,
- 			io_quan,
- 			io_total
+ 			io_quan
  		) VALUES (
 			SEQ_IOLIST.NEXTVAL,
  			#{io_date},
@@ -30,12 +29,26 @@
  			#{io_input},
  			#{io_pname},
  			#{io_price},
- 			#{io_quan},
- 			#{io_total} 		
+ 			#{io_quan}		
  		)
  	</insert>
 
- 	<update id="update"></update>
- 	<delete id="delete"></delete>
+ 	<update id="update" parameterType="IolistVO">
+ 		 UPDATE tbl_iolist 
+ 		 SET
+ 			io_date = #{io_date},
+ 			io_time = #{io_time},
+ 			io_input = #{io_input},
+ 			io_pname = #{io_pname},
+ 			io_price = #{io_price},
+ 			io_quan = #{io_quan}
+ 		WHERE 
+ 			seq = #{seq}
+ 	</update>
+ 	
+ 	
+ 	<delete id="delete">
+ 		DELETE FROM tbl_iolist WHERE seq = #{seq}
+ 	</delete>
  
  </mapper> 

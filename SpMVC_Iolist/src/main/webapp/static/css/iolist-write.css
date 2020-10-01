@@ -14,13 +14,28 @@ form#iolist div {
 form#iolist label {
   flex: 1;
   width: 30%;
-  text-align: right;
+  text-align: center;
   padding: 8px;
   margin: 5px;
 }
 
+form#iolist select {
+	flex:3;
+	padding: 7px;
+	border: 1px solid #999;
+	border-radius: 4px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	outline: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
 form#iolist input {
-  flex: 5; /*diplay를 블록으로 만들어주면 한줄에 하나가 차지를 하기 때문에 아래로 흐름*/
+  flex: 3; /*diplay를 블록으로 만들어주면 한줄에 하나가 차지를 하기 때문에 아래로 흐름*/
   border: 1px solid #ddd;
   border-radius: 5px;
   margin: 5px;
@@ -36,7 +51,7 @@ form#iolist fieldset {
 
 form#iolist fieldset legend {
   font-weight: bold;
-  color: #bcaaa4;
+  color: #795548;
   text-align: center;
 }
 
@@ -59,4 +74,5 @@ form#iolist button#btn-save:hover {
   background-color: white;
   color: #795548;
   border: 2px solid #795548;
+  transition: 0.5s;
 }

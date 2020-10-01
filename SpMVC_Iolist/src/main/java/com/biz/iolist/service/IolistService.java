@@ -11,5 +11,5 @@ public interface IolistService {
 	
 	public int insert(IolistVO iolistVO);
 	public int update(IolistVO iolistVO);
-	public int delete(IolistVO iolistVO);
+	public int delete(long seq);
 }
