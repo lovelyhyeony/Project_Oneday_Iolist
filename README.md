@@ -5,7 +5,7 @@
 - HTML
 - CSS
 - JAVA
-- Vanilla JS
+- :icecream: Vanilla JS
 
 ## :heavy_check_mark: IDE Tool
 
