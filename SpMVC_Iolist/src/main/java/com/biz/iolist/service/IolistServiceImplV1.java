@@ -85,13 +85,11 @@ public class IolistServiceImplV1 implements IolistService {
 
 	@Override
 	public int update(IolistVO iolistVO) {
-		// TODO Auto-generated method stub
 		return iolistDao.update(iolistVO);
 	}
 
 	@Override
 	public int delete(long seq) {
-		// TODO Auto-generated method stub
 		return iolistDao.delete(seq);
 	}
 

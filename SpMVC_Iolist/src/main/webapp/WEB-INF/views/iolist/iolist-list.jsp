@@ -15,6 +15,20 @@ prefix="c"%>
             document.location.href = "/iolist/detail?seq=" + seq;
           });
         });
+        var oSum = 0;
+        var iSum = 0;
+        document.querySelectorAll("#iprice").forEach(function (iprice) {
+          var temp = iprice.getAttribute("data-id");
+          iSum = iSum + parseInt(temp);
+        });
+
+        document.querySelectorAll("#oprice").forEach(function (oprice) {
+          var temp = oprice.getAttribute("data-id");
+          oSum = oSum + parseInt(temp);
+        });
+
+        document.querySelector("#isum").innerHTML = iSum;
+        document.querySelector("#osum").innerHTML = oSum;
       });
     </script>
     <link
@@ -51,14 +65,18 @@ prefix="c"%>
               <td>${ioVO.io_iprice}</td>
               <td>${ioVO.io_oprice}</td>
               <td>${ioVO.io_quan}</td>
-              <td>${ioVO.io_iprice_multi}</td>
-              <td>${ioVO.io_oprice_multi}</td>
+              <td id="iprice" data-id="${ioVO.io_iprice_multi}">
+                ${ioVO.io_iprice_multi}
+              </td>
+              <td id="oprice" data-id="${ioVO.io_oprice_multi}">
+                ${ioVO.io_oprice_multi}
+              </td>
             </tr>
           </c:forEach>
           <tr>
-          	<td colspan="7">합계</td>
-          	<td>${ioVo.io_iprice_total}</td>
-          	<td>${ioVo.io_oprice_total}</td>
+            <td colspan="7">합계</td>
+            <td id="isum"></td>
+            <td id="osum"></td>
           </tr>
         </c:otherwise>
       </c:choose>
