@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>IOLIST</title>
 <link rel="stylesheet"
-	href="${rootPath}/static/css/index.css?ver=2020-10-01" />
+	href="${rootPath}/static/css/index.css?ver=2020-10-04-4565" />
 <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script>
 	$(function() {
@@ -34,6 +34,8 @@
 	<nav id="main-nav">
 		<ul>
 			<li>상품 검색</li>
+			<li>회원가입</li>
+			<li>로그인</li>
 		</ul>
 	</nav>
 	<section id="main-section">

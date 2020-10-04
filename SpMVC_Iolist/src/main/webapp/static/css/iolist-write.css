@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 form#iolist {
   width: 60%;
   margin: 10px auto;
@@ -30,6 +29,11 @@ form#iolist select {
 	outline: none;
 }
 
+/*
+다른 브라우저환경에서
+화살표 아이콘이 겹치는것을
+방지하기 위함
+*/
 select::-ms-expand {
     display: none;
 }
@@ -45,13 +49,13 @@ form#iolist input {
 
 form#iolist fieldset {
   border: 2px solid #bcaaa4;
-  border-radius: 10px;
-  padding: 20px;
+  border-radius: 4px;
+  padding: 1rem;
 }
 
 form#iolist fieldset legend {
-  font-weight: bold;
   color: #795548;
+  font-weight: bold;
   text-align: center;
 }
 

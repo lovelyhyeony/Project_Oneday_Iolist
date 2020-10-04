@@ -33,7 +33,7 @@ prefix="c"%>
     </script>
     <link
       rel="stylesheet"
-      href="${rootPath}/static/css/iolist-list.css?ver=2020-10-01-003"
+      href="${rootPath}/static/css/iolist-list.css?ver=2020-10-04-47877"
     />
   </head>
   <body>

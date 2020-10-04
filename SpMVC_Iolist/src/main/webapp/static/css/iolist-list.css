@@ -5,22 +5,23 @@ table#iolist-list {
   width: 90%;
   border: 1px solid #aaa;
   margin: 30px auto;
+  color: #3e2723;
+}
+
+table#iolist-list th {
+  color: #4e342e;	
 }
 
 table#iolist-list th,
 table#iolist-list td {
   border-bottom: 1px solid #ddd;
   padding: 8px;
-  text-align: left;
+  text-align: center;
   vertical-align: top;
 }
 
 table#iolist-list td {
   cursor: pointer;
-}
-
-table#iolist-list td:last-child {
-	text-align: center;
 }
 
 table#iolist-list tr:nth-child(even) {
@@ -31,7 +32,8 @@ table#iolist-list tr:nth-child(odd) {
   background-color: white;
 }
 
-table#iolist-list tr:hover {
+table#iolist-list tr:nth-child(n+2):hover {
+	color: white;
 	background-color: #795548;
 }
 

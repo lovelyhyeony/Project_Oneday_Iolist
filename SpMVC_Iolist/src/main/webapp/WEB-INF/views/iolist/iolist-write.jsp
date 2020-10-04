@@ -4,7 +4,7 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <c:set var="rootPath" value="${pageContext.request.contextPath}" />
 <link rel="stylesheet"
-	href="${rootPath}/static/css/iolist-write.css?ver=2020-10-01-003" />
+	href="${rootPath}/static/css/iolist-write.css?ver=2020-10-04" />
 <script>
 	document.addEventListener("DOMContentLoaded", function() {
 		document.querySelector("#btn-save").addEventListener("click",
