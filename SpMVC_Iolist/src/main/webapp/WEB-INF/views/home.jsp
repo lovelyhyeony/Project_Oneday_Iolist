@@ -13,10 +13,8 @@
 <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script>
 	$(function() {
-		// 화면에 scroll이 일어나면
 		$(window).scroll(function() {
-			let headerHeight = $("header").height(); // header tag의 높이 값
-			// 화면을 세로 방향으로 스크롤 할 때 윈도우 화면의 최 상단 좌표 가져오기
+			let headerHeight = $("header").height();
 			let windowTop = $(window).scrollTop();
 			if (windowTop > headerHeight) {
 				$("#main-nav").css("position", "fixed");
