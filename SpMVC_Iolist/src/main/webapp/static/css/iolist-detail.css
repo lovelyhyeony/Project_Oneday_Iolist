@@ -24,12 +24,14 @@ form#detail-form fieldset table#detail-table {
 
 form#detail-form fieldset table#detail-table tr td:first-child {
 	font-weight: bold;
-	text-align: left;
+	text-align: center;
 	color: #795548;
 }
 
 form#detail-form fieldset table#detail-table tr td:nth-child(2) {
-	text-align: left;
+	text-align: center;
+	color: #3e2723;
+	border-bottom: 1px solid #795548;
 }
 
 form#detail-form div {

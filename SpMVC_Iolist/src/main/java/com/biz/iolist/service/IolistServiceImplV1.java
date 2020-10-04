@@ -50,14 +50,14 @@ public class IolistServiceImplV1 implements IolistService {
 	}
 
 	private IolistVO calcVO(IolistVO ioVO) {
-
 		int price = ioVO.getIo_price();
 		if (ioVO.isIo_input()) {
 			ioVO.setIo_oprice(price);
+			ioVO.setIo_oprice_multi(price * ioVO.getIo_quan());
 		} else {
 			ioVO.setIo_iprice(price);
+			ioVO.setIo_iprice_multi(price * ioVO.getIo_quan());
 		}
-
 		return ioVO;
 	}
 
