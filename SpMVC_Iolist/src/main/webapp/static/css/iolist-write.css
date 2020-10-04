@@ -1,25 +1,26 @@
 @charset "UTF-8";
+
 form#iolist {
-  width: 60%;
-  margin: 10px auto;
+	width: 60%;
+	margin: 10px auto;
 }
 
 form#iolist div {
-  width: 95%;
-  margin: 0 auto;
-  display: flex;
+	width: 95%;
+	margin: 0 auto;
+	display: flex;
 }
 
 form#iolist label {
-  flex: 1;
-  width: 30%;
-  text-align: center;
-  padding: 8px;
-  margin: 5px;
+	flex: 1;
+	width: 30%;
+	text-align: center;
+	padding: 8px;
+	margin: 5px;
 }
 
 form#iolist select {
-	flex:3;
+	flex: 3;
 	padding: 7px;
 	border: 1px solid #999;
 	border-radius: 4px;
@@ -35,48 +36,53 @@ form#iolist select {
 방지하기 위함
 */
 select::-ms-expand {
-    display: none;
+	display: none;
 }
 
 form#iolist input {
-  flex: 3; /*diplay를 블록으로 만들어주면 한줄에 하나가 차지를 하기 때문에 아래로 흐름*/
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin: 5px;
-  padding: 8px;
-  outline: none;
+	flex: 3; /*diplay를 블록으로 만들어주면 한줄에 하나가 차지를 하기 때문에 아래로 흐름*/
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	margin: 5px;
+	padding: 8px;
+	outline: none;
 }
 
 form#iolist fieldset {
-  border: 2px solid #bcaaa4;
-  border-radius: 4px;
-  padding: 1rem;
+	border: 2px solid #bcaaa4;
+	border-radius: 4px;
+	padding: 1rem;
 }
 
 form#iolist fieldset legend {
-  color: #795548;
-  font-weight: bold;
-  text-align: center;
+	color: #795548;
+	font-weight: bold;
+	text-align: center;
+}
+
+form#iolist fieldset div label {
+	color: #795548;
+	font-weight: bold;
 }
 
 form#iolist div.button-box {
-  justify-content: flex-end;
+	justify-content: flex-end;
 }
 
 form#iolist button#btn-save {
-  background-color: #795548;
-  color: white;
-  padding: 0.5rem 25px;
-  border: none;
-  border: 2px solid transparent;
-  border-radius: 4px;
-  cursor: pointer;
-  outline: none;
+	background-color: #795548;
+	color: white;
+	padding: 0.5rem 25px;
+	border: none;
+	border: 2px solid transparent;
+	border-radius: 4px;
+	cursor: pointer;
+	outline: none;
 }
 
 form#iolist button#btn-save:hover {
-  background-color: white;
-  color: #795548;
-  border: 2px solid #795548;
-  transition: 0.5s;
+	background-color: white;
+	color: #795548;
+	border: 2px solid #795548;
+	transition: 0.5s;
 }

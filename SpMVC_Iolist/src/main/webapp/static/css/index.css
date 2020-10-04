@@ -57,12 +57,12 @@ nav#main-nav {
 }
 
 section#main-section {
-  height: 1000px;
+  height: 700px;
 }
 
 footer {
   background-color: #bcaaa4;
-  color: ghostwhite;
+  color: white;
   text-align: center;
   padding: 10px;
 }

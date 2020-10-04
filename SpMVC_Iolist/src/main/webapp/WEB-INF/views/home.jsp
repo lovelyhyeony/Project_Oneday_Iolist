@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>IOLIST</title>
 <link rel="stylesheet"
-	href="${rootPath}/static/css/index.css?ver=2020-10-04-4565" />
+	href="${rootPath}/static/css/index.css?ver=2020-10-04-456" />
 <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script>
 	$(function() {

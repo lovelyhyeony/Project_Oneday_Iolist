@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="rootPath" value="${pageContext.request.contextPath}" />
-<link rel="stylesheet" href="${rootPath}/static/css/iolist-detail.css?ver=2020-10-04">
+<link rel="stylesheet" href="${rootPath}/static/css/iolist-detail.css?ver=2020-10-04-11">
 <form id="detail-form">
 	<fieldset>
 		<legend>DETAIL</legend>

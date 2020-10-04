@@ -25,6 +25,7 @@ form#detail-form fieldset table#detail-table {
 form#detail-form fieldset table#detail-table tr td:first-child {
 	font-weight: bold;
 	text-align: left;
+	color: #795548;
 }
 
 form#detail-form fieldset table#detail-table tr td:nth-child(2) {
