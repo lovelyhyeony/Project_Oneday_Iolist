@@ -82,7 +82,7 @@ prefix="c"%>
       </c:choose>
     </table>
     <div id="iolist-link-box">
-      <a href="${rootPath}/write">새로작성</a>
+      <a href="${rootPath}/write">작성</a>
     </div>
   </body>
 </html>
