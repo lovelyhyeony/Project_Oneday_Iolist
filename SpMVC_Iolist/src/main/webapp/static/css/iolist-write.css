@@ -2,13 +2,24 @@
 
 form#iolist {
 	width: 60%;
-	margin: 10px auto;
+	margin: 0 auto;
+	margin-top: 100px;
+}
+
+form#iolist fieldset {
+	height: 500px;
+}
+
+form#iolist fieldset legend {
+	font-size: 20px;
+	padding: 10px;
 }
 
 form#iolist div {
 	width: 95%;
-	margin: 0 auto;
+	margin: 20px auto;
 	display: flex;
+	padding: 10px;
 }
 
 form#iolist label {
@@ -17,6 +28,7 @@ form#iolist label {
 	text-align: center;
 	padding: 8px;
 	margin: 5px;
+	border-bottom: 1px solid #795548;
 }
 
 form#iolist select {
@@ -73,6 +85,8 @@ form#iolist button#btn-save {
 	border-radius: 4px;
 	cursor: pointer;
 	outline: none;
+	font-family: 'Nanum Myeongjo', serif;
+	font-weight: bold;
 }
 
 form#iolist button#btn-save:hover {

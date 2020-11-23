@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="rootPath" value="${pageContext.request.contextPath}" />
 <link rel="stylesheet"
-	href="${rootPath}/static/css/iolist-detail.css?ver=2020-10-04-123">
+	href="${rootPath}/static/css/iolist-detail.css?ver=2020-11-24-dds3">
 <form id="detail-form">
 	<fieldset>
 		<legend>DETAIL</legend>

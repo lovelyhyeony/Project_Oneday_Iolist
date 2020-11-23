@@ -20,12 +20,15 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-@RequiredArgsConstructor
 @Controller
 public class IolistController {
 
 	@Qualifier("iolistServiceV1")
 	private final IolistService iolistService;
+
+	public IolistController(IolistService iolistService) {
+		this.iolistService = iolistService;
+	}
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String list(Model model) {
@@ -51,7 +54,6 @@ public class IolistController {
 
 		iolistVO.setIo_date(date);
 		iolistVO.setIo_time(time);
-
 		model.addAttribute("iolistVO", iolistVO);
 
 		log.debug("정보 입력 : {}", iolistVO.toString());

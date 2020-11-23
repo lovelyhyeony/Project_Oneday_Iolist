@@ -1,11 +1,14 @@
 @charset "UTF-8";
+
 form#detail-form {
-	width: 500px;
+	width: 70%;
 	padding: 40px;
 	margin: 0 auto;
+	margin-top: 100px;
 }
 
 form#detail-form fieldset {
+	height: 500px;
 	border: 2px solid #bcaaa4;
 	border-radius: 4px;
 	padding: 1rem;
@@ -15,23 +18,32 @@ form#detail-form fieldset legend {
 	color: #795548;
 	font-weight: bold;
 	text-align: center;
+	font-size: 20px;
+	padding: 10px;
 }
 
 form#detail-form fieldset table#detail-table {
+	justify-content: center;
 	margin: 0 auto;
 	width: 100%;
+}
+
+form#detail-form fieldset table#detail-table tr td {
+	padding: 2rem;
 }
 
 form#detail-form fieldset table#detail-table tr td:first-child {
 	font-weight: bold;
 	text-align: center;
 	color: #795548;
+	padding: 20px;
 }
 
 form#detail-form fieldset table#detail-table tr td:nth-child(2) {
 	text-align: center;
 	color: #3e2723;
 	border-bottom: 1px solid #795548;
+	padding: 20px;
 }
 
 form#detail-form div {
@@ -45,6 +57,7 @@ form#detail-form div a {
 	border: 2px solid transparent;
 	border-radius: 4px;
 	text-decoration: none;
+	font-family: 'Nanum Myeongjo', serif;
 }
 
 form#detail-form div a:hover {

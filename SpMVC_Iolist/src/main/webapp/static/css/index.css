@@ -11,7 +11,7 @@ header {
   미리 header에 postion을 지정해준다.
   */
   position: relative;
-  height: 400px;
+  height: 300px;
   color: ghostwhite;
 
   background-image: url("../images/21df00ea972fc0fd5dbdb82348b88c83.jpg");
@@ -21,8 +21,17 @@ header {
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: left;
+}
+
+header h1 {
+	display: inline;
+	font-weight: bold;
+	color: #795548;
+	text-align: left;
+	margin-left: 20px; 
+	font-family: 'Nanum Myeongjo', serif;
 }
 
 nav#main-nav {
@@ -43,6 +52,7 @@ nav#main-nav {
   margin: 0 12px;
   cursor: pointer;
   border-bottom: 2px solid transparent;
+  font-family: 'Nanum Myeongjo', serif;
 }
 
 #main-nav ul li:nth-child(2) {
@@ -57,7 +67,8 @@ nav#main-nav {
 }
 
 section#main-section {
-  height: 700px;
+  height: 600px;
+  font-family: 'Nanum Myeongjo', serif;
 }
 
 footer {
